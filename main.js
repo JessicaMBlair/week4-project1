@@ -1,4 +1,3 @@
-// Add your JS here.
 $(document).ready(function(){
   
     $("div").click(function(){
@@ -18,20 +17,19 @@ $(document).ready(function(){
     });
 	
 	$("ul li:last").click(function(){
-       $("ul li:last").css('font-size', '40px');
+        $("ul li:last").css('font-size', '40px');
 		$("ul li:nth-child(1)").hide();
 		$("ul li:nth-child(2)").hide();
 		$("ul li:nth-child(3)").hide();
 		$("ul li:nth-child(4)").hide();
     });
 	
-	//?????
-	$("img.cute").click(function(){
-        $("body").append($("img.cute").clone(true));
-    });
+   	$(".cute").click(function() {
+        $(".cute").clone(true).insertAfter(".cute");
+   });
 	
 	$("body").dblclick(function(){
-        $("#makeSquare").css({'border-radius': '50%', 'height': '100px', 'width' :'100px'});
+        $("#makeSquare").css({'border-radius': '0', 'height': '100px', 'width' :'100px'});
     });
 	
 	$("#dontClick").click(function(){
@@ -57,7 +55,6 @@ $(document).ready(function(){
 	$("#hover").mouseover(function(){
         $("#hover").css('background-color', 'red');
     });
-	
 	
 	$("#hover").click(function(){
         $("#hover").toggleClass('green');
